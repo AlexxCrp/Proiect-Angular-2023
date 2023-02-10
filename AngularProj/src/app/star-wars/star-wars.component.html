@@ -1,0 +1,21 @@
+<div class = "container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="row">
+        <app-dropdown
+        [type] = "Type1"
+        (planetData)="savePlanet($event)"></app-dropdown>
+      </div>
+      <div class="row">
+        <app-dataview [type] = "Type1" [planet]="planetToSend"></app-dataview>
+      </div>
+      <div class="row">
+        <app-dropdown
+        [type] = "Type2"
+        (characterData)="saveCharacter($event)"></app-dropdown>
+      </div>
+      <div class="row">
+        <app-dataview [type] = "Type2" [character]="characterToSend"></app-dataview>
+      </div>
+    </div>
+</div>
