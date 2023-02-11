@@ -9,6 +9,14 @@ import { DataviewComponent } from './dataview/dataview.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FormsModule } from '@angular/forms';
 import { StarWarsComponent } from './star-wars/star-wars.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'starwars',
+    component: StarWarsComponent },
+  { path: 'anime',
+  component: QuoteComponent }
+];
 
 @NgModule({
   declarations: [
@@ -22,7 +30,8 @@ import { StarWarsComponent } from './star-wars/star-wars.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
